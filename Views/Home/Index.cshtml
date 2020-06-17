@@ -1,0 +1,48 @@
+﻿@model IEnumerable<NguyenQuocAnhLab456.Models.Course>
+@{
+    ViewBag.Title = "Home Page";
+}
+<ul class="course">
+    @foreach (var course in Model)
+    {
+        <li>
+            <div class="date">
+                <div class="day">
+                    @course.DateTime.ToString("dd")
+                </div>
+                <div class="month">
+                    @course.DateTime.ToString("MM")
+                </div>
+            </div>
+            <div class="details">
+                <div class="lecturer">
+                    @course.Lecturer.Name
+                </div>
+                <div class="category">
+                    @course.Category.Name
+                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".js-toggle-attendance").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/attendances", { courseId: button.attr("data-course-id") })
+                    .done(function () {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Going");
+                    })
+                    .fail(function () {
+                        alert('Some failed!');
+                    });
+            });
+        });
+    </script>
+}
