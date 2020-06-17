@@ -231,3 +231,4 @@ C:\Users\QANH's PC\Desktop\NguyenQuocAnhLab456-master\bin\System.Web.Http.WebHos
 C:\Users\QANH's PC\Desktop\NguyenQuocAnhLab456-master\bin\System.Net.Http.Formatting.xml
 C:\Users\QANH's PC\Desktop\NguyenQuocAnhLab456-master\bin\System.Web.Http.xml
 C:\Users\QANH's PC\Desktop\NguyenQuocAnhLab456-master\bin\System.Web.Http.WebHost.xml
+C:\Users\QANH's PC\Desktop\NguyenQuocAnhLab456-master\obj\Debug\NguyenQuocAnhLab456.Migrations.AddFollowingsTable.resources
