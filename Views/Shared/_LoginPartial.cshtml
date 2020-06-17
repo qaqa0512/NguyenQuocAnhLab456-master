@@ -10,8 +10,9 @@
                 @User.Identity.GetUserName()
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a href="#">Courser I'm Going</a></li>
-                <li><a href="#">Lecture I'm Going</a></li>
+                <li>@Html.ActionLink("My Upcoming Courses", "Mine", "Courses")</li>
+                <li>@Html.ActionLink("Course I'm Going", "Attending", "Courses")</li>
+                <li><a href="#">Lecture I'm Flowing</a></li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
         </li>
