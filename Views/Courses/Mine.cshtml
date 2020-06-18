@@ -35,7 +35,7 @@
 @section scripts
 {
     <script>
-        $(document).ready(function () {
+        $(function () {
             $(".js-cancel-course").click(function (e) {
                 e.preventDefault();
                 var link = $(e.target);
@@ -51,7 +51,7 @@
                                 });
                             })
                             .fail(function () {
-                                alert("Something failed!");
+                                
                             });
                 });
             });
